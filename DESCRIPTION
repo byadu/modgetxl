@@ -1,0 +1,14 @@
+Package: modgetxl
+Title: A 'shiny' Module for Reading Excel Sheets 
+Version: 0.1
+License: MIT + file LICENSE
+Author: Yadu Balehosur <yadu@vizualytics.com>
+Depends: shiny,
+	DT,
+	shinydashboard,
+	readxl
+Maintainer: Yadu Balehosur <yadu@vizualytics.com>
+Description: This is a shiny module that presents a file picker UI to get an Excel file name, and reads the Excel sheets using readxl package and returns the resulting sheet(s) as a vector and data in dataframe(s).
+RoxygenNote: 7.0.1
+NeedsCompilation: no
+Packaged: 2020-06-19 02:28:52 UTC; cubot
