@@ -14,9 +14,10 @@
 #' @export
 #'
 # Server function getxl
+xl<- reactiveValues(sheets=NULL, sheetdata=NULL)
+	
 getxl<- function(input, output, session) {
 	ns<- session$ns
-	xl<- NULL
 
 	output$xldtls<- renderUI({
 		req(input$filename)
@@ -57,8 +58,6 @@ getxlUI<- function(id) {
 #' @param session is shiny session variable
 #'
 xldisp<- function(input, output, session, xlfile, skiprows) {
-	xl<- reactiveValues(sheets=NULL, sheetdata=NULL)
-	
 	sheets<- excel_sheets(xlfile)
 	sheetdata<- list()
 	for(i in 1:length(sheets)) {
